@@ -16,7 +16,7 @@ The MATE Center coordinates an international student underwater robotics ROV com
 
 ### This Repo 
 
-This Repo has the code and schematics for the 4th mission in the competition.
+This Repo has the code and schematics for the 2nd mission in the competition.
 
 - Python Image Recognition Code
 - Arduino Code
