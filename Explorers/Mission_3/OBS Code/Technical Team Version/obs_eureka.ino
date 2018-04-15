@@ -1,4 +1,3 @@
-
 #include <SoftwareSerial.h>
 #include <Wire.h>
 #include <LSM303.h>
@@ -6,7 +5,6 @@
 #define DEBUG true
 
 LSM303 compass;
-
 char report[80];
 
 
@@ -41,8 +39,7 @@ void loop()
   Serial.println(report);
 
   delay(100);
-
-
+  
   if (esp8266.available()) // check if the esp is sending a message
   {
     /*
@@ -76,10 +73,9 @@ void loop()
 
         if (Voltage > 1.0)
         {
-
-
           compass.read();
 
+          //These can be changed according to the sensor's calibration and offsets
           if (compass.a.x > 2000 && compass.a.y > 2000) {
 
             Serial.println("DATA: 0, 4.4, -4.3, 0, 0, 6.8, -7, 0, 0, 1.6, -1.6, 0, 0, 6.3, -6.4, 0");
